@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title> 4 Func Calculator with Forms </title>
+   <script type="text/javascript">
+		function clearAll(form) {
+			form.Number.value = 0;
+			form.Result.value = 0;
+		} // End clearAll
+
+		function add(emily, rango, orange) {
+			console.log({emily})
+			console.log({rango})
+			console.log({orange})
+
+			var result = emily + rango
+
+			// console.log({sum})
+			
+			return result
+		}
+
+		function newFUnction(){
+			var emily = 'lovely';
+		}
+
+
+		function divide(a, b) {
+			return a / b
+		}
+
+		function addNumber(form) {
+			console.log(form)
+			console.log(form.Result)
+			form.Result.value = form.Result.value + form.Number.value;
+		} // End addNumber
+			
+		function subNumber(form) {
+			form.Result.value = parseInt(form.Result.value) - parseInt(form.Number.value);;
+		} // End addNumber
+			
+		function mulNumber(form) {
+			form.Result.value = parseInt(form.Result.value) * parseInt(form.Number.value);
+		} // End addNumber
+			
+		function divNumber(form) {
+			form.Result.value = parseInt(form.Result.value) / parseInt(form.Number.value);;
+		} // End addNumber
+   </script>
+</head>
+<body>
+	<h1> Calculator with Forms/JavaScript </h1>
+	<form name="calc">
+		Number: <input type="text" value="0" name="Number" id="Number" /> 
+		Number2: <input type="text" value="0" name="Number2" id="Number2" /> 
+		Result: <input type="text" value="0" name="Result" id="Result" /> <br />
+		Function: <input type="button" value="+" onClick="addNumber(this.form)" name="Add" id="Add" />
+		<input type="button" value="-" onClick="subNumber(this.form)" name="Sub" id="Sub" />
+		<input type="button" value="x" onClick="mulNumber(this.form)" name="Mul" id="Mul" />
+		<input type="button" value="/" onClick="divNumber(this.form)" name="Div" id="Div" />
+		<input type="button" value="C" onClick="clearAll(this.form)" name="Clear" id="Clear" />
+	</form>
+</body>
+</html>
